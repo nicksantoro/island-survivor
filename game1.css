@@ -1,0 +1,61 @@
+/* STICKY FOOTER START ----------------- */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+    flex-shrink: 0;
+    /* margin-top: 100px; */
+    background: #98B4D4;
+  }
+  /* STICKY FOOTER END ----------------- */
+
+
+
+   /* FONT ----------------- */
+
+  @font-face {
+	font-family: 'Market-Bold';
+	src: url('market-font/market-bold.eot');
+	src: url('market-font/market-bold.eot?#iefix') format('embedded-opentype'),
+             url('market-font/market-bold.woff2') format('woff2'),
+	     url('market-font/market-bold.woff') format('woff'),
+	     url('market-font/market-bold.ttf') format('truetype'),
+	     url('market-font/market-bold.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+h1 {
+    font-family: 'Market-Bold' !important;
+    font-size: 125px !important;
+    color: #F2552C !important;
+}
+
+h3 {
+  font-family: 'Market-Bold' !important;
+  font-size: 50px !important;
+  color: #FAE03C !important;
+}
+
+canvas {
+    border: 1px solid black;
+    display: none;
+    /*
+    width: 100vw;
+    height: 100vh;
+    */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
