@@ -14,6 +14,7 @@ body {
     flex-shrink: 0;
     /* margin-top: 100px; */
     background: #98B4D4;
+    margin-top: 40px;
   }
   /* STICKY FOOTER END ----------------- */
 
@@ -32,7 +33,6 @@ body {
 	font-weight: normal;
 	font-style: normal;
 }
-
 
 h1 {
     font-family: 'Market-Bold' !important;
@@ -57,5 +57,16 @@ canvas {
     background-repeat: no-repeat;
 }
 
+#mainCharacter {
+  margin-bottom: 40px;
+}
 
+#crab {
+  
+}
 
+.banana {
+  width: 100px;
+  height: 100px;
+  background: url("banana.svg") no-repeat;
+}

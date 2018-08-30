@@ -12,53 +12,40 @@
     <title>Island Survivor</title>
 </head>
 
-<body>
+<!----------- BODY ----------->
 
-    
+<body>
     <main>
+
+        <!----------- FIRST PAGE USER VIEWS ----------->
         
         <div id="mainMenu" class="text-center">
             <h1>Island Survivor</h1>
-
-            <!-- Sign in Form -->
-            <h3>Select Your Alien</h3>
-
-            <img src="alien.svg" alt="alien-red">
-            <img src="alienGreen.svg" alt="alien-green">
-            <img src="alienBlue.svg" alt="alien">
-
-            <!-- Button / Start Game -->
+            <img src="alien.svg" id="mainCharacter">
             <br>
             <button type="button" class="btn btn-warning btn-lg" onclick="startGame()">Start Game!</button>
         </div>
 
-
-        <!-- MAIN GAME BOARD -->
+        <!----------- MAIN GAME BOARD / 2ND PAGE USER VIEWS -----------> 
        
         <div id="mainGame" class="bg-primary" style="display: none">
             <canvas></canvas>
         </div>
+
+        <!----------- CHARACTERS ----------->
     
-
         <img src="alien.svg" id="characterSprite" class="d-none">
-
-        <img src="banana.svg" id="fruitSprite" class="d-none">
-
-        <a href="default.asp">
-            <img src="smiley.gif">
-          </a>
-        
+        <!-- <img src="banana.svg" id="fruitSprite" class="d-none">  -->
+        <img src="cherry.svg" id="crabSprite" class="d-none">
+        <img src="heartA.svg" id="heartA" class="d-none">
+        <img src="heartB.svg" id="heartB" class="d-none">
+        <img src="heartC.svg" id="heartC" class="d-none">
 
         <!-- <img src="http://pixelartmaker.com/art/1f76112848dad8a.png" id="characterSprite" class="d-none"> -->
 
     </main>
 
-
-    <!-- <audio controls loop>
-        <source src="148283__rmutt__oceanwaves-5.wav" type="audio/wav">
-    </audio> -->
-
-    <!-- FOOTER -->
+   <!----------- FOOTER ----------->
 
     <footer class="p-5">
         <div class="container">
@@ -70,9 +57,8 @@
         </div>
     </footer> 
 
-   
     <script src="game1.js"></script>
-
     
 </body>
+
 </html>
