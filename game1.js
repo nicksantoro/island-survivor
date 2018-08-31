@@ -20,10 +20,12 @@
 
 /* ----------- FRAMERATE ----------- */
 
+
 const FRAMERATE = 60;
 const TIME_BETWEEN_FRAMES = 1000 / FRAMERATE;
 
 /* ----------- CANVAS ----------- */
+
 
 // Assign variable to canvas  
 let canvas = document.querySelector('canvas');
@@ -43,6 +45,7 @@ let yFruit = Math.random() * innerHeight;
 let fruit1Exists = true;
 let xFruit2 = Math.random() * innerWidth;
 let yFruit2 = Math.random() * innerHeight;
+let fruit2Exists = true;
 let xCrab = Math.random() * innerWidth;
 let yCrab = Math.random() * innerHeight;
 
@@ -83,6 +86,7 @@ let character = {
         this.health;
     }
 }
+
 
 /* ------------------- FUNCTIONS ------------------- */
 
@@ -218,12 +222,13 @@ function startGame( ){
             context.drawImage(heartA, 60 * i, 35, 50, 50);
         }
        
-        let fruitSprite2 = document.getElementById("fruitSprite");
-        context.drawImage(fruitSprite2, xFruit2, yFruit2, 100, 100);
+        // let fruitSprite2 = document.getElementById("fruitSprite");
+        // context.drawImage(fruitSprite2, xFruit2, yFruit2, 100, 100);
 
         character.draw( );
 
-        // If fruit1 exists
+        /* ----------- IF FRUIT 1 EXISTS ----------- */
+
         if( fruit1Exists === true ){
             let fruitSprite1 = document.getElementById("fruitSprite");
             context.drawImage(fruitSprite1, xFruit, yFruit, 100, 100);
@@ -239,6 +244,26 @@ function startGame( ){
                 character.health++;
                 // Mark the fruit as non-existant
                 fruit1Exists = false;
+            }
+        }
+
+        /* ----------- IF FRUIT 2 EXISTS ----------- */
+
+        if( fruit2Exists === true ){
+            let fruitSprite2 = document.getElementById("fruitSprite");
+            context.drawImage(fruitSprite2, xFruit2, yFruit2, 100, 100);
+
+            let isColliding2 = checkCollision( character.sprite, { top: yFruit2, bottom: yFruit2 + 100, left: xFruit2, right: xFruit2 + 100 } );
+
+            if( isColliding2 === true ) {
+                // Add sound effect
+                let collectSound = new Audio();
+                collectSound.src="collectSound.wav";
+                collectSound.play();
+                // Add 1 heart
+                character.health++;
+                // Mark the fruit as non-existant
+                fruit2Exists = false;
             }
         }
 
