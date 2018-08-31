@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="game1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Island Survivor</title>
+</head>
+
+<!----------- BODY ----------->
+
+<body>
+    <main>
+
+        <!----------- FIRST PAGE USER VIEWS ----------->
+        
+        <div id="mainMenu" class="text-center">
+            <h1>Island Survivor</h1>
+            <img src="alien.svg" id="mainCharacter">
+            <br>
+            <button type="button" class="btn btn-warning btn-lg" onclick="startGame()">Start Game!</button>
+        </div>
+
+        <!----------- MAIN GAME BOARD / 2ND PAGE USER VIEWS -----------> 
+       
+        <div id="mainGame" class="bg-primary" style="display: none">
+            <canvas></canvas>
+        </div>
+
+
+
+        <!-- <div id="end" class="text-center">
+            <h1>Thanks for playing!</h1>
+            <br>
+        </div> -->
+
+        <!----------- CHARACTERS ----------->
+    
+        <img src="alien.svg" id="characterSprite" class="d-none">
+        <img src="banana.svg" id="fruitSprite" class="d-none"> 
+        <img src="cherry.svg" id="crabSprite" class="d-none">
+        <img src="heartA.svg" id="heartA" class="d-none">
+        <img src="heartB.svg" id="heartB" class="d-none">
+        <img src="heartC.svg" id="heartC" class="d-none">
+        <img src="ship.svg" id="ship" class="d-none">
+        <img src="spaceCharacter.svg" id="spaceCharacter" class="d-none">
+        <img src="bird.svg" id="bird" class="d-none">
+        <div id="testTime">Score: <span id="testScore">0</span></div>
+
+
+
+        <!-- <img src="http://pixelartmaker.com/art/1f76112848dad8a.png" id="characterSprite" class="d-none"> -->
+
+    </main>
+
+   <!----------- FOOTER ----------->
+
+    <footer class="p-5">
+        <div class="container">
+            <address class="text-light m-0">
+                <h3 class="text-dark">Demo Version</h3>
+                This game is designed for humans young and old. <br>
+                Made in San Francisco, CA <br>
+                <a href="mailto:santoro.nick@gmail.com">santoro.nick@gmail.com</a>
+            </address>
+        </div>
+    </footer> 
+
+    <script src="game1.js"></script>
+    
+</body>
+
+</html>

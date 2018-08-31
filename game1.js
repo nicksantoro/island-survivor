@@ -1,7 +1,10 @@
 // TODO FUTURE FEATURES: 
 // 1. Create new artwork
-// 3. Start working on fishing
-// 4. 
+// 3. Create Enemies, random movement
+// 4. Change the sprite drawing order depending on some variable
+// 5. 
+
+
 
 // TODO:
 // 1. Change the 'Z' key to the 'S'
@@ -15,8 +18,6 @@
 // Formula for translating a point:
 // https://math.stackexchange.com/questions/143932/calculate-point-given-x-y-angle-and-distance
 
-// TODO (long-term):
-// 1. Change the sprite drawing order depending on some variable
 
 /* ----------- FRAMERATE ----------- */
 
@@ -127,7 +128,7 @@ function startGame( ){
     if(character.name !== "") {
         alert("The year is 1982. " + character.name + " has crash landed on a tropical island and needs your help! Keep " + character.name + " alive until rescued. Good luck!");
     } else {
-        alert("The year is 1982. Our alien friend has crash landed on a tropical island and needs your help. This alien needs to eat, sleep and survive the elements until rescued. Good luck!");
+        alert("The year is 1982. Our alien friend has crash landed on a tropical island and needs your help. This alien needs to eat to survive. Good luck!");
     }
 
     let mainMenu = document.getElementById('mainMenu');
@@ -277,6 +278,10 @@ function startGame( ){
         } else {
             localStorage.setItem("score", 0);
         }
+
+        if(+localStorage.getItem("score") === 25) {
+            alert("Congratulations! You have survived up to this point. But, trouble is on the way! To be continued.....");
+        }
     
     },1000)
 };
@@ -291,61 +296,7 @@ function doSomethingWithCharacter( characterX, characterY, characterSpeed, chara
 doSomethingWithCharacter( characterX, characterY, characterSpeed, characterName, characterHealth );
 */
 
-// The above can be accomplished with this...
+// The above can be accomplished with this... 
 
 
 character.doSomething( );
-
-
-// HEALTH BAR - HEARTS
-
-// FACTORS: FRUIT, ENEMY, SLEEP
-
-
-// START WITH 3 FIXED HEARTS
-// A LIST OF HEART 1, HEART 2, & HEART 3
-// IF CHARACTER TOUCHES ENEMY AND ARRAY LENGTH IS 3, POP HEART 3
- // IF CHARACTER TOUCHES ENEMY, AND THERE ARE 2 HEARTS, POP HEART 2
-   // IF CHARACTER TOUCHES ENEMY, AND THERE IS 1 HEART, END GAME
-
-// let health = [heartA, heartB, heartC];
-
-// if(character x and y === enemy x and y && health.length === 3) {
-//     health.pop(heartC);
-// }
-
-// if(character x and y === enemy x and y && health.length === 2) {
-//     health.pop(heartB)
-// }
-
-// if(character x and y === enemy x and y && health.length === 1) {
-//     alert game over, restart option back to main game
-// }
-
-// SCATTERED FRUIT
-// IF CHARACTER TOUCHES FRUIT, AND THERE ARE 3 HEARTS, NOTHING HAPPENS
-// IF CHARACTER TOCHERS FRUIT, AND THERE ARE 2 HEARTS, PUSH HEART 3
-  // IF CHARACTER TOUCHES FRUIT, AND THERE IS 1 HEART, PUSH HEART 2
-
-// IF YOU TOUCH CHERRY
-// RESET TO FULL HEALTH
-
-
-// if(character x and y === fruit x and y && health.length === 3) {
-//     nothing happens;
-// }
-
-// if(character x and y === fruit x and y && health.length === 2) {
-//     health.push(heartC)
-// }
-
-// if(character x and y === fruit x and y && health.length === 1) {
-//     health.push(heartB)
-// }
-
-// TIMER
-// SET A TIMER - 24 HOUR CLOCK.
-// IF CHARACTER DOESN'T EAT A FRUIT EVERY 3 HOURS, POP HEARTS
-// START CONDITION ONCE 3RD HOUR STARTS
-// FIRST 6TH HOUR, IF NO FRUIT HAS BEEN TOUCHED, POP HEART 3;
-// EVRERY THIRD HOUR, IF NO FRUIT HAS BEEN TOUCHED, POP 
