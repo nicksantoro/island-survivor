@@ -70,3 +70,12 @@ canvas {
   height: 100px;
   background: url("banana.svg") no-repeat;
 }
+
+#testTime {
+ position: absolute;
+ z-index: 99999;
+ color: white;
+ top: 0;
+ right: 0;
+ font-size: 20px;
+}
